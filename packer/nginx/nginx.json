@@ -1,0 +1,19 @@
+{
+    "builders": [
+        {
+            "type": "docker",
+            "image": "ubuntu:18.04",
+            "commit": true
+        }
+    ],
+  
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+            "apt-get update",
+            "apt-get upgrade --yes",
+            "apt-get install nginx --yes"
+        ]
+      }
+    ]
+  }
